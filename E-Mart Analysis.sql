@@ -2,25 +2,26 @@
 	count the number of users per country
 */
 SELECT country, 
-	COUNT(userid) number_of_user
-	FROM batch_19.fafa_usertab
+	   COUNT(userid) number_of_user
+FROM batch_19.fafa_usertab
 GROUP BY country
 
 
 /*
 	count the number of orders per country
 */
-select  u.country, count(distinct o.orderid) number_of_order
+select u.country, 
+	   count(distinct o.orderid) number_of_order
 from batch_19.fafa_usertab u
 left join batch_19.fafa_ordertab o on u.userid = o.userid 
 group by 1	
 
 
-
 /* 
 	find the first order date of each user
 */
-select userid, min(order_time) first_order_time
+select userid, 
+	   min(order_time) first_order_time
 from batch_19.fafa_ordertab
 group by 1
 
@@ -28,34 +29,29 @@ group by 1
 /* 
 	find the number of users who made their first order in each country and each day
 */
-select 
-	u.country, 
-	o.order_time, 
-	count(*) number_of_user
-from batch_19.fafa_usertab u 
-inner join (
-  select userid, 
-  min(order_time) order_time 
-  from batch_19.fafa_ordertab o
-  group by userid
-	) 
-	o on o.userid = u.userid
-group by u.country, o.order_time
+select o.first_order_time, 
+	   u.country, 
+	   count(distinct o.userid) total_users
+from (
+	select userid, min(order_time) first_order_time
+	from batch_19.fafa_ordertab
+	group by 1
+	) o
+left join batch_19.fafa_usertab u on o.userid = u.userid 
+group by 1,2
+order by 1,2
 
 
 /* 
 	find the first order GMV of each user. If there is a tie, use the order with the lower orderid
 */
-select 
-	u.userid,
-	u.register_time,
-	(select o.gmv
-        from batch_19.fafa_ordertab o
-        where o.userid = u.userid
-        order by order_time, orderid
-        limit 1
-       )
-from batch_19.fafa_usertab u
+select userid,
+	   gmv 
+from (
+	select userid, gmv, min(order_time) first_order_time, min(orderid) first_order_id
+	from batch_19.fafa_ordertab
+	group by 1,2
+	) o
 
 
 /* 
