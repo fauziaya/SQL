@@ -14,11 +14,11 @@ This repository is consist of my SQL experience to be include in my CV
 * Language used for querying: [PostgreSQL](https://www.postgresql.org/)
 * Use this [customer dataset](https://github.com/fauziaya/SQL/blob/main/customer1%20-%20e-mart%20dataset.csv), [product dataset](https://github.com/fauziaya/SQL/blob/main/product1%20-%20e-mart%20dataset.csv), [store dataset](https://github.com/fauziaya/SQL/blob/main/store1%20-%20e-mart%20dataset.csv), and [transaction dataset](https://github.com/fauziaya/SQL/blob/main/transaction%20-%20e-mart%20dataset.csv) to import the tables
 * See my queries [here](https://github.com/fauziaya/SQL/blob/main/Reatail%20Analysis.sql)
-* See Retail Analysis [Report](https://github.com/fauziaya/SQL/blob/main/SQL%20Retail%20Analysis.pptx)
+* See Retail Analysis [Report](https://github.com/fauziaya/SQL/blob/main/SQL%20Retail%20Analysis.pdf)
 
 ### 3. [Maven Pizza Sales Analysis](https://github.com/fauziaya/SQL/blob/main/Pizza%20Sales.sql)
 #### Data source: [Maven Analytics](https://www.mavenanalytics.io/data-playground)
 * Language used for querying: [PostgreSQL](https://www.postgresql.org/)
 * Use this [dataset](https://github.com/fauziaya/SQL/tree/main/Pizza%2BPlace%2BSales)
 * See my queries [here](https://github.com/fauziaya/SQL/blob/main/Pizza%20Sales.sql)
-* See Maven Pizza Sales [Report](https://github.com/fauziaya/SQL/blob/main/SQL%20Pizza%20Analysis.pptx)
+* See Maven Pizza Sales [Report](https://github.com/fauziaya/SQL/blob/main/SQL%20Pizza%20Analysis.pdf)
