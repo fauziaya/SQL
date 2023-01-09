@@ -22,3 +22,8 @@ This repository is consist of my SQL experience to be include in my CV
 * Use this [dataset](https://github.com/fauziaya/SQL/tree/main/Pizza%2BPlace%2BSales)
 * See my queries [here](https://github.com/fauziaya/SQL/blob/main/Pizza%20Sales.sql)
 * See Maven Pizza Sales [Report](https://github.com/fauziaya/SQL/blob/main/SQL%20Pizza%20Analysis.pdf)
+
+### 4. [San Francisco Ford GoBike](https://console.cloud.google.com/bigquery?sq=241327247903:d1c18d17a607473caf18173ba13ff221)
+#### Data source: Google BigQuery SanFransisco Ford GoBike
+* Language used for querying: [Google Bigquery](https://cloud.google.com/bigquery/)
+* See my queries [here](https://console.cloud.google.com/bigquery?sq=241327247903:d1c18d17a607473caf18173ba13ff221)
